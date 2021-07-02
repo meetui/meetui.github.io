@@ -6,24 +6,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="./css/vue.css">
+  <link rel="stylesheet" href="./css/vue.css" title="vue">
+  <link rel="stylesheet" href="./css/dark.css" title="dark" disabled>
+  <link rel="stylesheet" href="./css/changelog.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 <body>
-  <!-- <nav>
-    <a href="#/">EN</a>
-    <a href="#/zh-cn/">中文</a>
-  </nav> -->
-  <div id="app"></div>
+  <nav style="position: fixed;">
+    <ul>
+      <li>指南</li>
+      <li>组件</li>
+      <li>JS</li>
+    </ul>
+  </nav>
+  <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
       coverpage: true, //启用首页渲染
-      loadNavbar: true, //配置导航栏
+      executeScript: true,//开启scripr执行
+      auto2top: true,//切换页面后是否自动跳转到页面顶部。
+      // routerMode: 'history', // default: 'hash'
+      autoHeader: true,
+      onlyCover: true,
+      relativePath: true,
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      formatUpdated: function(time) {
+        // ...
+
+        return time;
+      },
+      loadSidebar: true,
+      loadNavbar: true,
+      // mergeNavbar: true,
       name: '二维码 条形码',
-      repo: 'https://ext.dcloud.net.cn/plugin?id=4662'
+      repo: 'https://ext.dcloud.net.cn/plugin?id=4662',
+      // subMaxLevel: 2,
+      // topMargin: 90, // default: 0
+      changelog : 'CHANGELOG.md',
+      search: {
+        placeholder: '搜索'
+      },
+      count:{
+        position: 'bottom',
+        language: 'chinese',
+        color: 'var(--theme-color)'
+      },
+      copyCode: {//复制到剪贴板
+        buttonText : 'Copy to clipboard',
+        errorText  : 'Error',
+        successText: 'Copied'
+      },
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      },
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="./utils/docsify@4.js"></script>
   <script src="./utils/docsify.min.js"></script>
+  <script src="./utils/search.min.js"></script>
+  <script src="./utils/docsify-copy-code.min.js"></script>
+  <script src="./utils/progress.min.js"></script>
+  <script src="./utils//changelog.js"></script>
+  <script src="./utils//vue.global.prod.js"></script>
+  <script src="./utils//countable.min.js"></script>
 </body>
 </html>

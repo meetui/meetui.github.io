@@ -9,4 +9,4 @@
 - 众多主题
 
 [插件市场](https://docsify.js.org/#/zh-cn/cover)
-[开始使用](https://docsify.js.org/#/zh-cn/cover)
+[开始使用](/guide/#效果演示)
