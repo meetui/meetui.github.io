@@ -1,3 +1,7 @@
+?> 的东东东东你 `false`
+
+!> 一段重要的内容，可以和其他 **Markdown** 语法混用。
+
 <center>
 <figure>
 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d4381cff624fc79ab28cdd1bf3cc6a~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
@@ -160,7 +164,6 @@ npm publish --access public
 
   preview.onclick = function (e) {
     var title = e.target.getAttribute('data-theme');
-    console.log(1111)
     themes.forEach(function (theme) {
       theme.disabled = theme.title !== title;
     });

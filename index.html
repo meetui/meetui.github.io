@@ -13,11 +13,10 @@
 </head>
 <body>
   <nav style="position: fixed;">
-    <ul>
-      <li>指南</li>
-      <li>组件</li>
-      <li>JS</li>
-    </ul>
+    <a href="#/guide/#效果演示">指南</a>
+    <a href="#/components/#components">组件</a>
+    <a href="#/js/#js">JS</a>
+    <a href="#/log/#js">更新日志</a>
   </nav>
   <div id="app">Loading ...</div>
   <script>
@@ -30,14 +29,9 @@
       onlyCover: true,
       relativePath: true,
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      formatUpdated: function(time) {
-        // ...
-
-        return time;
-      },
       loadSidebar: true,
-      loadNavbar: true,
-      // mergeNavbar: true,
+      loadNavbar: false,
+      mergeNavbar: true,
       name: '二维码 条形码',
       repo: 'https://ext.dcloud.net.cn/plugin?id=4662',
       // subMaxLevel: 2,
