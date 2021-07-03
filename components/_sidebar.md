@@ -1,30 +1,10 @@
-<!-- * [指南](/guide/README.md)
+- 起步
 
-  - [Configuration](configuration.md)
-  - [Themes](themes.md)
-  - [List of Plugins](plugins.md)
-  - [Write a Plugin](write-a-plugin.md)
-  - [Markdown configuration](markdown.md)
-  - [Language highlighting](language-highlight.md)
+  - [交流反馈](/components/#加微信群交流)
+  - [介绍](/components/intro/#介绍)
+  - [安装](/components/install/#安装)
+  - [配置](/components/#配置)
 
-* [组件](/js/README.md)
-* [JS](/components/README.md) -->
-
-- 组件
-
-  - [Quick start](quickstart.md)
-  - [Writing more pages](more-pages.md)
-  - [Custom navbar](custom-navbar.md)
-  - [Cover page](/hello.md)
-
-- Customization
-
-  - [Configuration](configuration.md)
-  - [Themes](themes.md)
-  - [List of Plugins](plugins.md)
-  - [Write a Plugin](write-a-plugin.md)
-  - [Markdown configuration](markdown.md)
-  - [Language highlighting](language-highlight.md)
 
 - Guide
 
@@ -36,5 +16,3 @@
   - [Server-Side Rendering(SSR)](ssr.md)
   - [Embed Files](embed-files.md)
 
-- [Awesome docsify](awesome.md)
-- [Changelog](changelog.md)

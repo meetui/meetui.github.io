@@ -8,19 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./css/vue.css" title="vue">
   <link rel="stylesheet" href="./css/dark.css" title="dark" disabled>
-  <link rel="stylesheet" href="./css/changelog.css">
-  <link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 <body>
   <nav style="position: fixed;">
-    <a href="#/guide/#效果演示">指南</a>
+    <!-- <a href="#/guide/#效果演示">指南</a>
     <a href="#/components/#components">组件</a>
     <a href="#/js/#js">JS</a>
-    <a href="#/log/#js">更新日志</a>
+    <a href="#/log/#js">原生插件</a>
+    <a href="#/log/#js">更新日志</a> -->
   </nav>
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
+      // logo: 'log.svg',
       coverpage: true, //启用首页渲染
       executeScript: true,//开启scripr执行
       auto2top: true,//切换页面后是否自动跳转到页面顶部。
@@ -30,13 +30,13 @@
       relativePath: true,
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
       loadSidebar: true,
-      loadNavbar: false,
+      loadNavbar: true,
       mergeNavbar: true,
-      name: '二维码 条形码',
-      repo: 'https://ext.dcloud.net.cn/plugin?id=4662',
+      cornerExternalLinkTarget: '_self', // default: '_blank'
+      // name: '二维码 条形码',
+      repo: 'http://localhost:3000/#/',
       // subMaxLevel: 2,
       // topMargin: 90, // default: 0
-      changelog : 'CHANGELOG.md',
       search: {
         placeholder: '搜索'
       },
@@ -62,7 +62,6 @@
   <script src="./utils/search.min.js"></script>
   <script src="./utils/docsify-copy-code.min.js"></script>
   <script src="./utils/progress.min.js"></script>
-  <script src="./utils//changelog.js"></script>
   <script src="./utils//vue.global.prod.js"></script>
   <script src="./utils//countable.min.js"></script>
 </body>

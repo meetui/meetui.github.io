@@ -1,15 +1,17 @@
-# 加微信群交流
+# 安装
 
 > *更新时间 2020-07-01*
 
-!> **如果你在实际项目中遇到问题，为了能够第一时间解决问题，为了不影响各位在项目的交付特此提供微信群交流**
+!> **必须带`-save` 因为组件依赖 `@uni-ui/code-plugs`**
 
-<img src="/images/code.png" width="300" />
+nvue使用指南[详情](/)
+```js
+// 安装
+npm i @uni-ui/code-ui -save
 
-如果你用的顺手觉得还不错
-
-<img src="/images/weixin.png" width="200" />
-<img src="/images/zhifubao.png" width="200" />
+// 更新
+npm update @uni-ui/code-ui
+```
 
 #### 主题
 

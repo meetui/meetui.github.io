@@ -1,0 +1,35 @@
+# 介绍
+
+> *更新时间 2020-07-01*
+
+此插件来源与早期在做支付宝小程序时，因项目需要只能使用与支付宝小程序。后因做微信小程序项目需要二维码，将只能使用与支付宝小程序的插件改为微信小程序插件。当时在做同一个功能时要适配微信小程序以及支付宝小程序，从开始的两套代码到后来使用别人的脚手架相互转换，非常麻烦。直到`uni-app`出现以后，让一切变得很简单。2021年入职新公司，相对来说比较闲，有很多的时间可以摸鱼。于是将以前的插件进行修改并添加新的功能，适配`uni-app` 以适应于多端
+
+#### 主题
+
+<div class="demo-theme-preview">
+  <a data-theme="vue">正常</a>
+  <a data-theme="dark">暗黑</a>
+</div>
+
+<style>
+  .demo-theme-preview a {
+    padding-right: 10px;
+  }
+
+  .demo-theme-preview a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  var preview = Docsify.dom.find('.demo-theme-preview');
+  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+
+  preview.onclick = function (e) {
+    var title = e.target.getAttribute('data-theme');
+    themes.forEach(function (theme) {
+      theme.disabled = theme.title !== title;
+    });
+  };
+</script>

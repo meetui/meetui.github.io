@@ -1,15 +1,15 @@
-?> 的东东东东你 `false`
+> *更新时间 2020-07-01*
 
-!> 一段重要的内容，可以和其他 **Markdown** 语法混用。
+!> **以下展示效果为IOS真机展示 所展示二维码均可扫描体验**
 
-<center>
 <figure>
 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d4381cff624fc79ab28cdd1bf3cc6a~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
 <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71d7c20e8c91495c81d245ccfc83d7e7~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d4381cff624fc79ab28cdd1bf3cc6a~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71d7c20e8c91495c81d245ccfc83d7e7~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bfe9eb88cea44007b2627bb640343dcc~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b625254802404a9b84bd699e67b03db4~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
+<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84328d92b104edbad4c34a8665b4c72~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1548ccd6c944bbe90ef288817077b8c~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
 </figure>
-</center>
 
 [二维码 条形码](https://ext.dcloud.net.cn/plugin?id=4662)
 
