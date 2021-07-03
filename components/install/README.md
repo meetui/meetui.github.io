@@ -12,33 +12,29 @@ npm i @uni-ui/code-ui -save
 // 更新
 npm update @uni-ui/code-ui
 ```
+> [!NOTE]
+> An alert of type 'note' using global style 'callout'.
 
-#### 主题
+> [!NOTE|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
 
-<div class="demo-theme-preview">
-  <a data-theme="vue">正常</a>
-  <a data-theme="dark">暗黑</a>
-</div>
 
-<style>
-  .demo-theme-preview a {
-    padding-right: 10px;
-  }
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
 
-  .demo-theme-preview a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-</style>
+> [!TIP|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
 
-<script>
-  var preview = Docsify.dom.find('.demo-theme-preview');
-  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
 
-  preview.onclick = function (e) {
-    var title = e.target.getAttribute('data-theme');
-    themes.forEach(function (theme) {
-      theme.disabled = theme.title !== title;
-    });
-  };
-</script>
+> [!WARNING]
+> An alert of type 'warning' using global style 'callout'.
+
+> [!WARNING|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
+
+
+> [!ATTENTION]
+> An alert of type 'attention' using global style 'callout'.
+
+> [!ATTENTION|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.

@@ -2,7 +2,7 @@
 
 > *更新时间 2020-07-01*
 
-!> **如果你在实际项目中遇到问题，为了能够第一时间解决问题，为了不影响各位在项目的交付特此提供微信群交流**
+!> **如果你在实际项目中遇到问题，为了能够第一时间解决问题，为了不影响各位在项目中的交付特此提供微信群交流**
 
 <img src="/images/code.png" width="300" />
 
@@ -11,32 +11,9 @@
 <img src="/images/weixin.png" width="200" />
 <img src="/images/zhifubao.png" width="200" />
 
-#### 主题
+> [!tip]
+> An alert of type 'note' using global style 'callout'.
 
-<div class="demo-theme-preview">
-  <a data-theme="vue">正常</a>
-  <a data-theme="dark">暗黑</a>
-</div>
 
-<style>
-  .demo-theme-preview a {
-    padding-right: 10px;
-  }
-
-  .demo-theme-preview a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-</style>
-
-<script>
-  var preview = Docsify.dom.find('.demo-theme-preview');
-  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
-
-  preview.onclick = function (e) {
-    var title = e.target.getAttribute('data-theme');
-    themes.forEach(function (theme) {
-      theme.disabled = theme.title !== title;
-    });
-  };
-</script>
+> [!TIP|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.

@@ -6,17 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="./css/vue.css" title="vue">
-  <link rel="stylesheet" href="./css/dark.css" title="dark" disabled>
+  <link  rel="stylesheet" href="./css/style.min.css" title="docsify-darklight-theme" type="text/css" />
 </head>
 <body>
-  <nav style="position: fixed;">
-    <!-- <a href="#/guide/#效果演示">指南</a>
-    <a href="#/components/#components">组件</a>
-    <a href="#/js/#js">JS</a>
-    <a href="#/log/#js">原生插件</a>
-    <a href="#/log/#js">更新日志</a> -->
-  </nav>
+  <nav style="position: fixed;z-index:9999;"></nav>
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
@@ -25,22 +18,21 @@
       executeScript: true,//开启scripr执行
       auto2top: true,//切换页面后是否自动跳转到页面顶部。
       // routerMode: 'history', // default: 'hash'
-      autoHeader: true,
+      // autoHeader: true,
       onlyCover: true,
       relativePath: true,
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
       loadSidebar: true,
       loadNavbar: true,
       mergeNavbar: true,
       cornerExternalLinkTarget: '_self', // default: '_blank'
-      // name: '二维码 条形码',
+      // name: 'docsify-darklight-theme',
       repo: 'http://localhost:3000/#/',
       // subMaxLevel: 2,
       // topMargin: 90, // default: 0
       search: {
         placeholder: '搜索'
       },
-      count:{
+      count:{//字数统计
         position: 'bottom',
         language: 'chinese',
         color: 'var(--theme-color)'
@@ -50,19 +42,34 @@
         errorText  : 'Error',
         successText: 'Copied'
       },
-      progress: {
+      progress: {//阅读进度
         position: "top",
         color: "var(--theme-color,#42b983)",
         height: "3px",
       },
+      'flexible-alerts': {
+        note: {
+          label: "温馨提示"
+        },
+        tip: {
+          label: "说明"
+        },
+        warning: {
+          label: "警告"
+        },
+        attention: {
+          label: "注意"
+        }
+      }
     }
   </script>
   <!-- Docsify v4 -->
   <script src="./utils/docsify.min.js"></script>
   <script src="./utils/search.min.js"></script>
   <script src="./utils/docsify-copy-code.min.js"></script>
-  <script src="./utils/progress.min.js"></script>
-  <script src="./utils//vue.global.prod.js"></script>
+  <!-- <script src="./utils/progress.min.js"></script> -->
   <script src="./utils//countable.min.js"></script>
+  <script src="./utils/lexible-alerts.min.js"></script>
+  <script src="./utils//them.min.js"></script>
 </body>
 </html>

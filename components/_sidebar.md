@@ -3,7 +3,7 @@
   - [交流反馈](/components/#加微信群交流)
   - [介绍](/components/intro/#介绍)
   - [安装](/components/install/#安装)
-  - [配置](/components/#配置)
+  - [配置](/components/setting/#配置)
 
 
 - Guide
