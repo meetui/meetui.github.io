@@ -1,6 +1,7 @@
 # Nvue
 > *更新时间 2020-07-01*
 
+nvue 特有使用方式
 # 配置
 
 `manifest.json`
@@ -21,6 +22,7 @@
 HBuilderX 2.2.5（alpha）开始 nvue 页面支持 Canvas，支持 W3C WebGL API WebGL 1.0
 
 在App端，从性能来讲，由于通讯阻塞的问题，nvue的canvas性能不可能达到使用renderjs的vue页面的canvas。在App端，推荐使用vue的canvas。
+
 
 ```js
 npm i @uni-plugs/uni-canvas-nvue
@@ -299,3 +301,5 @@ npm i @uni-plugs/uni-code
 	}
 </style>
 ```
+
+# 完整参数

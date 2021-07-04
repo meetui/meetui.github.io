@@ -4,7 +4,7 @@
 
 此组件为二维码，默认没有边框以及二维码的颜色是黑色，如果需要边框或者颜色需要传对应的参数详情可参考下面的示例
 
-> [!ATTENTION]
+> [!ATTENTION|style:flat|label:注意|]
 > Nvue不支持此组件，使用方式请参考[Nvue](/plugs/web/nvue/#Nvue)
 
 ### 平台差异说明
@@ -14,6 +14,179 @@
 |√ |√  |√ |√ | √| √| √|
 
 只要是使用`uni-app`进行开发，凡是支持`canvas`画布的都支持此组件
+
+### 基本使用
+
+请确定在`pages.json`里面配置了`easycom`。如果没有请前往当前文档的：使用方式->组件方式里面的配置。如已经配置请忽略
+
+```html
+<template>
+	<w-qrcode :options="options"></w-qrcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
+					size: 460,// 460代表生成的二维码的宽高均为460rpx
+				},
+			}
+		},
+	}
+</script>
+
+```
+
+### 增加边框
+
+```html
+<template>
+	<w-qrcode :options="options"></w-qrcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
+                    border:{
+						color: ['#ec008c','#fc6767'], // 边框颜色支持渐变色 目前只支持最多两种颜色的渐变
+                        // color: '#fc6767', // 单色不渐变
+						lineWidth: 6, // 边框的宽度 不传默认为4
+					},
+					size: 460,// 460代表生成的二维码的宽高均为460rpx
+				},
+			}
+		},
+	}
+</script>
+```
+
+### 修改颜色
+
+```html
+<template>
+	<w-qrcode :options="options"></w-qrcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
+                    color: ['#11998e','#38ef7d'],// 颜色支持渐变色 目前只支持最多两种颜色的渐变
+                    // color: '#38ef7d',// 单色不渐变
+					size: 460,// 460代表生成的二维码的宽高均为460rpx
+				},
+			}
+		},
+	}
+</script>
+
+```
+
+### 添加LOG
+
+
+```html
+<template>
+	<w-qrcode :options="options"></w-qrcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
+					size: 460,// 460代表生成的二维码的宽高均为460rpx
+                    img: '/static/logo.png',//图片路径
+                    iconSize: 40,// 不传此参数默认为30
+				},
+			}
+		},
+	}
+</script>
+```
+
+> [!ATTENTION|style:flat|label:注意|]
+> 图片的路径，可以是相对路径，临时文件路径，存储文件路径，网络图片路径建。如果图片路径多变建议统一采用以下方式
+
+```js
+uni.getImageInfo({
+    src:'/static/logo.png',// 图片的路径，可以是相对路径，临时文件路径，存储文件路径，网络图片路径
+    complete: res =>{// 接口调用结束的回调函数（调用成功、失败都会执行）
+        console.log(res)// res.path 为图片路径 获取到res.path后赋值给 img参数
+    }
+});
+```
+
+### 保存二维码
+
+> [!TIP|style:flat|label:说明|]
+> 具体返回信息请看官方文档https://uniapp.dcloud.io/api/canvas/canvasToTempFilePath
+
+
+```html
+<template>
+	<w-qrcode ref="qrcode" :options="options"></w-qrcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
+					size: 460,// 460代表生成的二维码的宽高均为460rpx
+				},
+			}
+		},
+        methods: {
+			async SaveCode (){//保存二维码图片
+				const res = await this.$refs.qrcode.saveImg()
+				console.log(res)
+			}
+	}
+</script>
+
+```
+
+### 完整示例
+
+```html
+<template>
+	<w-qrcode ref="qrcode" :options="options" @generate="aleard"></w-qrcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',
+					size: 460,
+                    border:{
+						color: ['#ec008c','#fc6767'],
+						lineWidth: 6,
+					},
+                    level: 4, //纠错等级
+                    color: ['#11998e','#38ef7d'],
+                    img: '/static/logo.png',
+                    iconSize: 40,
+				},
+			}
+		},
+        methods: {
+            async SaveCode (){//保存二维码图片
+                const res = await this.$refs.qrcode.saveImg()
+                console.log(res)
+            },
+            aleard (res) {// 二维码创建成功的回调 修改参数同样触发
+                console.log(res)
+            }
+        }
+</script>
+
+```
 
 ### 二维码Props
 
@@ -47,23 +220,3 @@ options为一个对象
 |:----:   |:----:|:-----:|
 |generate |二维码创建成功的时候触发  |返回一个对象 |
 
-### 最简单的示例
-
-```html
-<template>
-	<w-qrcode :options="options"></w-qrcode>
-</template>
-<script>
-	export default {
-		data() {
-			return {
-				options:{
-					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
-					size: 460,// 460代表生成的二维码的宽高均为460rpx
-				},
-			}
-		},
-	}
-</script>
-
-```

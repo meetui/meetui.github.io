@@ -12,9 +12,11 @@
     - [-Css](/plugs/web/nvue/#Css)
     - [-Js](/plugs/web/nvue/#Js)
     - [-完整示例](/plugs/web/nvue/#完整示例)
+    - [-完整参数](/plugs/web/nvue/#完整参数)
 
 - Uni-app原生插件
   - [开机自启](/plugs/native/#开机自启)
   - [应用禁止截屏](/plugs/native/#应用禁止截屏)
   - [检测是否被Root](/plugs/native/#检测系统是否被root)
   - [SSL双向校验](/plugs/native/#SSL双向校验)
+  - [身份证离线识别](/plugs/native/#身份证离线识别)
