@@ -1,6 +1,5 @@
-# 更新日志
+# 开机自启
 
-# 1.2
 > 更新时间 2020-07-01
 
 * 修复 MacOSX 3.1.17引出的 自带中文输入法输入英文会造成部分类型的文件着色失效的Bug
@@ -18,7 +17,7 @@
 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1548ccd6c944bbe90ef288817077b8c~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
 </figure>
 
-# 1.1
+# 应用禁止截屏
 > 更新时间 2020-07-01
 
 * 【重要】升级 HBuilderX 内置node版本升级为12.22，内置npm版本升级为6.4
@@ -27,3 +26,7 @@
 * 新增 区域内搜索 选中一段文字，在顶部搜索栏选中区域搜索【Ctrl+Shift+f】，可以在特殊背景区内搜索、替换、全选相同词 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/find?id=区域内搜索)
 * 新增 自定义右键菜单。编辑器和内置资源管理器 `Alt + 鼠标右键`弹出自定义右键菜单
 * 新增 设置 增加启用自动匹配字符功能 （【设置 - 编辑器配置】，启用自动匹配字符功能）
+
+# 检测系统是否被root
+
+# SSL双向校验

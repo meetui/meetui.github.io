@@ -1,5 +1,5 @@
 - 文档更新日志
   - [1.2](/log/#12)
-  - [1.1](/log/#hello)
+  - [1.1](/log/#11)
   - [Custom navbar](/guide/#js)
   - [注意事项](/guide/#hello)

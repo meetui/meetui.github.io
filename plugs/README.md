@@ -17,12 +17,39 @@
 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1548ccd6c944bbe90ef288817077b8c~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
 </figure>
 
-# hello
-> 更新时间 2020-07-01
+# 使用方式
 
-* 【重要】升级 HBuilderX 内置node版本升级为12.22，内置npm版本升级为6.4
-* 【重要】调整 alt+鼠标滚动的行为从横向滚动调整为竖向滚动一屏。横向滚动为shift+鼠标滚轮
-* 强化 各种鼠标滚轮功能，横向竖向滚动、滚3行滚一屏 [详情](https://hx.dcloud.net.cn/Tutorial/keybindings?id=鼠标滚轮)
-* 新增 区域内搜索 选中一段文字，在顶部搜索栏选中区域搜索【Ctrl+Shift+f】，可以在特殊背景区内搜索、替换、全选相同词 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/find?id=区域内搜索)
-* 新增 自定义右键菜单。编辑器和内置资源管理器 `Alt + 鼠标右键`弹出自定义右键菜单
-* 新增 设置 增加启用自动匹配字符功能 （【设置 - 编辑器配置】，启用自动匹配字符功能）
+> [!TIP]
+> 二维码 条形码都有两种使用方式：组件形式与非组件形式 这里推荐使用组件方式进行使用
+
+### 组件方式
+
+组件方式依赖于`@uni-ui/code-plugs`，在`npm i @uni-ui/code-ui -save`的时候会自动安装相关依赖。无需单独安装
+
+```js
+npm i @uni-ui/code-ui -save
+```
+### 配置
+
+组件方式独有配置
+
+!> **uni-app的`easycom`在打包的时候是按需引入的，您可以放心引入的组件库，发布打包时会自动剔除您没有使用的组件**
+
+在`pages.json`里面配置如下
+```json
+"easycom": {
+	"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",//uView的配置
+	"^w-(.*)": "@uni-ui/code-ui/components/w-$1/index.vue"//二维码条形码的配置
+},
+"pages": [
+  //...
+]
+```
+
+### Js方式
+
+使用Js方式无需单独配置，只需要引用更具文档传参数即可使用
+
+```js
+npm i @uni-ui/code-plugs
+```
