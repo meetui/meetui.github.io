@@ -1,4 +1,4 @@
-- 更新日志
+- 文档更新日志
   - [1.2](/log/#12)
   - [1.1](/log/#hello)
   - [Custom navbar](/guide/#js)

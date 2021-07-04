@@ -1,6 +1,6 @@
 * [指南](/guide/#效果演示)
 * [组件](/components/)
 * [JS](/js/#js)
-* [原生插件](/native/#介绍)
-* [笔记](/note/#介绍)
+* [原生插件](/native/#js)
+* [笔记](/note/npm/)
 * [更新日志](/log/#12)
