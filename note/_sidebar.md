@@ -1,5 +1,7 @@
 - 日常使用笔记
   - [介绍](/note/#介绍)
+  - [论坛](/note/forum/)
+  - [工具](/note/tool/)
   - [Git](/note/git/#Git)
   - [Npm](/note/npm/#Npm)
   

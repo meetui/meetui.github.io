@@ -2,7 +2,7 @@
 > *更新时间 2020-07-01*
 
 nvue 特有使用方式
-# 配置
+### 配置
 
 `manifest.json`
 
@@ -14,7 +14,7 @@ nvue 特有使用方式
 }
 ```
 
-# 安装
+### 安装
 
 > [!TIP]
 > 关于`uni-canvas-nvue`来自与官方示例`https://github.com/dcloudio/NvueCanvasDemo`这里为了方便使用制作了npm包
@@ -25,14 +25,15 @@ HBuilderX 2.2.5（alpha）开始 nvue 页面支持 Canvas，支持 W3C WebGL API
 
 
 ```js
-npm i @uni-plugs/uni-canvas-nvue
-npm i @uni-plugs/uni-code
+npm i @uni-ui/nvue-canvas-plugs
+npm i @uni-ui/code-plugs
+
 ```
 
 > [!ATTENTION]
 > 相关参数均与vue使用方式相同。唯一不同的是ID 详情请参考[完整示例](/plugs/web/nvue/#完整示例)
 
-# Html
+### Html
 
 ```html
 <template>
@@ -53,7 +54,7 @@ npm i @uni-plugs/uni-code
 </template>
 ```
 
-# Css
+### Css
 
 ```css
 
@@ -100,12 +101,12 @@ npm i @uni-plugs/uni-code
 </style>
 ```
 
-# Js
+### Js
 
 ```javascript
 <script>
-    import {enable, WeexBridge } from '@uni-plugs/uni-canvas-nvue';
-    import CODE from '@uni-plugs/uni-code';
+    import {enable, WeexBridge } from '@uni-ui/nvue-canvas-plugs';
+    import CODE from '@uni-ui/code-plugs';
 
     const modal = weex.requireModule("modal");
     module.exports = {
@@ -170,7 +171,7 @@ npm i @uni-plugs/uni-code
 </script>
 ```
 
-# 完整示例
+#### 完整示例
 
 > [!NOTE]
 > 完整示例可以直接复制
@@ -193,10 +194,8 @@ npm i @uni-plugs/uni-code
 	</view>
 </template>
 <script>
-    // npm i @uni-plugs/uni-canvas-nvue
-    import {enable, WeexBridge } from '@uni-plugs/uni-canvas-nvue';
-    // npm i @uni-plugs/uni-code
-    import CODE from '@uni-plugs/uni-code';
+    import {enable, WeexBridge } from '@uni-ui/nvue-canvas-plugs';
+    import CODE from '@uni-ui/code-plugs';
 
     const modal = weex.requireModule("modal");
     module.exports = {
@@ -241,6 +240,8 @@ npm i @uni-plugs/uni-code
 			    bridge: WeexBridge
 			});
 			this.ctxBR = canvasBR.getContext('2d');
+
+			//创建二维码 条形码
             this.findCan();
         },
         methods: {
@@ -302,4 +303,16 @@ npm i @uni-plugs/uni-code
 </style>
 ```
 
-# 完整参数
+### 完整参数
+
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|类型|说明|
+|:----:|:----:|:----:|:----:|
+|id |是  |Object |请参考示例|
+|code |是  |String | 扫描二维码的结果    |
+|border |否  |Object | 生成二维码的边框配置    |
+|bgColor |否  |String | 生成二维码的背景色 默认 '#FFFFFF'    |
+|color     |否  |string/Array | 生成二维码的颜色默认黑色 支持渐变色['#e66465','#9198e5']    |
+|size |是  |String/Number |二维码的大小 一律当rpx处理  |
+|level |否  |Number | 生成二维码的等级    |
+|img     |否  |path | 生成二维码中间的图标    |
+|iconSize     |否  |Number | 生成二维码中间的图标大小 |

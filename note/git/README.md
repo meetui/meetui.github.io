@@ -2,7 +2,67 @@
 
 > 更新时间 2020-07-05
 
-日常使用`git`常用的操作命令
+日常使用`git`常用的操作命令 `.gitignore`
+
+### 第一次提交
+
+创建 git 仓库:
+
+```js
+1. git init
+
+2. git config user.name "name" //git config --global user.name 全局
+
+3. git config user.email "lovewmf@sina.cn"
+
+4. git add .
+
+5. git commit -m "init: 初始化项目"
+
+6. git remote add origin https://gitee.com/lovewmf/test.git
+
+7. git push -u origin master
+
+```
+
+已有仓库?
+
+```js
+1. git remote add origin https://gitee.com/lovewmf/test.git
+
+2. git push -u origin master
+```
+
+### 删除远程仓库分支
+
+```js
+git remote rm origin
+
+git branch -D name
+
+git push origin --delete name
+```
+### 账号错误
+
+清空本地保存的用户名和密码
+
+```js
+git config --system --unset credential.helper
+```
+
+### 代码合并
+
+全部合并
+
+```js
+git merge dev // 合并整个dev到当前分支
+```
+
+合并某一次提交
+
+```js
+git cherry-pick 282a0bcd6a64df3ffa6c24fbd8453ff22844a131 // 合并某一次提交到当前分支
+```
 
 ### commit注释规范
 
