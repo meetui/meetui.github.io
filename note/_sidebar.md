@@ -1,7 +1,7 @@
 - 日常使用笔记
   - [介绍](/note/#介绍)
-  - [Npm](/note/npm/#Npm)
   - [Git](/note/git/#Git)
+  - [Npm](/note/npm/#Npm)
   
 - Javascript小技巧
 

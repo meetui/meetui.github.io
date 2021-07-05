@@ -1,29 +1,50 @@
 # Git
 
-# 12
-> 更新时间 2020-07-01
+> 更新时间 2020-07-05
 
-* 修复 MacOSX 3.1.17引出的 自带中文输入法输入英文会造成部分类型的文件着色失效的Bug
-* 修复 MacOSX 3.1.17引出的 10.13.6操作系统，某些情况下，HBuilderX无法启动的Bug
-* 修复 Windows 3.1.17引出的 vue-cli项目，当电脑本身没有安装node环境时，运行项目到内置终端，相关npm命令执行失败的Bug
-* 优化 酷黑、雅蓝主题 代码助手 选中文本颜色
-* 修复 代码助手 数字模式 sass文件，某些css属性值无法正确输入数字的Bug
-  
-<figure>
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d4381cff624fc79ab28cdd1bf3cc6a~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71d7c20e8c91495c81d245ccfc83d7e7~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bfe9eb88cea44007b2627bb640343dcc~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b625254802404a9b84bd699e67b03db4~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84328d92b104edbad4c34a8665b4c72~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1548ccd6c944bbe90ef288817077b8c~tplv-k3u1fbpfcp-watermark.image" style="margin-bottom: 10px;" />
-</figure>
+日常使用`git`常用的操作命令
 
-# hello
-> 更新时间 2020-07-01
+### commit注释规范
 
-* 【重要】升级 HBuilderX 内置node版本升级为12.22，内置npm版本升级为6.4
-* 【重要】调整 alt+鼠标滚动的行为从横向滚动调整为竖向滚动一屏。横向滚动为shift+鼠标滚轮
-* 强化 各种鼠标滚轮功能，横向竖向滚动、滚3行滚一屏 [详情](https://hx.dcloud.net.cn/Tutorial/keybindings?id=鼠标滚轮)
-* 新增 区域内搜索 选中一段文字，在顶部搜索栏选中区域搜索【Ctrl+Shift+f】，可以在特殊背景区内搜索、替换、全选相同词 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/find?id=区域内搜索)
-* 新增 自定义右键菜单。编辑器和内置资源管理器 `Alt + 鼠标右键`弹出自定义右键菜单
-* 新增 设置 增加启用自动匹配字符功能 （【设置 - 编辑器配置】，启用自动匹配字符功能）
+规范的注释可以方便很多事,标签的作用是快速识别和判断出当前提交的内容的作用。
+
+```js
+git commit -m "init: 初始化项目"
+
+git commit -m "add: 添加一个新的功能"
+
+git commit -m "update: 更新某个功能或其它"
+
+git commit -m "flare: 本次提交亮点，表明自己完成了一个很有意思，很有闪光点，亮点的功能或代码。以便引起自己或他人的重视或注视。"
+
+git commit -m "done: 完成某一个功能"
+
+git commit -m "fix: 完成某个功能之后如果还有更新，就不做update了，因为你已经认为自己完成了。后面的都是发现的问题，所以都是要处理的bug，所以处理完，就要称之为修复fix"
+
+git commit -m "feature: 实现用户注册功能，修复所有问题，并通过测试.你已经完成此功能，将不会再对他进行修复或更新。除非要升级此功能，或此功能有了新的变化和需求。如果有新的需求了，则又要从add开始做"
+
+git commit -m "ban: 禁用某个功能,决定临时或永久的禁用。有可能未来会开启。如果永久的禁用，那不如删除"
+
+git commit -m "delete: 删除某个功能"
+
+git commit -m "reset: 弃用用户评论功能，并进行强制回退处理"
+
+git commit -m "style: 格式/样式（不影响代码运行的变动）"
+
+git commit -m "refactor: 重构（即不是新增功能，也不是修改bug的代码变动）"
+
+git commit -m "merge: 代码合并"
+
+git commit -m "sync: 同步主线或分支的Bug"
+
+git commit -m "revert: 回滚到上一个版本"
+
+git commit -m "chore: 构建过程或辅助工具的变动"
+
+git commit -m "test: 增加测试"
+
+git commit -m "perf: 优化相关，比如提升性能、体验"
+
+git commit -m "docs: 文档"
+```
+

@@ -10,4 +10,4 @@
 
 [插件市场](https://docsify.js.org/#/zh-cn/cover)
 [网址导航](https://info.lovewmf.com)
-[开始使用](/guide/#效果演示)
+[开始使用](/plugs/)
