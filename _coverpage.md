@@ -1,6 +1,6 @@
-<img width="150" style="border-radius:25%" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4fdacffde654b5d8a7c2e7698b68b0c~tplv-k3u1fbpfcp-watermark.image">
+<img width="150"  src="/images/81670120.png">
 
-# Barcode Qrcode <small>1.3.0</small>
+# Meet-UI
 
 > 时代抛弃你时，连一声再见都不会说
 
@@ -8,6 +8,5 @@
 - 无需生成 html 文件
 - 众多主题
 
-[插件市场](https://docsify.js.org/#/zh-cn/cover)
 [网址导航](https://info.lovewmf.com)
 [开始使用](/plugs/)

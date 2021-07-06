@@ -7,7 +7,7 @@
   
 - Javascript小技巧
 
-  - [Npm](/guide/#效果演示)
+  <!-- - [Npm](/guide/#效果演示)
   - [Git](/guide/#djddkk)
   - [Custom navbar](/guide/#js)
-  - [注意事项](/guide/#hello)
+  - [注意事项](/guide/#hello) -->
