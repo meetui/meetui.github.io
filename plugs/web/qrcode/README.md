@@ -168,6 +168,7 @@ uni.getImageInfo({
 						color: ['#ec008c','#fc6767'],
 						lineWidth: 6,
 					},
+					bgColor: "#fff",
                     level: 4, //纠错等级
                     color: ['#11998e','#38ef7d'],
                     img: '/static/logo.png',
