@@ -78,7 +78,7 @@ module.exports = {
 
 ```html
 <template>
-	<w-barcode @longtap="longtap" ref="barcode" :options="options"  @generate="aleard"></w-barcode>
+	<w-barcode @press="longtap" ref="barcode" :options="options"  @generate="aleard"></w-barcode>
 	<view @click="SaveCode"></view>
 </template>
 <script>

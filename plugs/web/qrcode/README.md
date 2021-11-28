@@ -179,7 +179,7 @@ uni.getImageInfo({
 
 ```html
 <template>
-	<w-qrcode ref="qrcode" :options="options" @generate="aleard" @longtap="longtap"></w-qrcode>
+	<w-qrcode ref="qrcode" :options="options" @generate="aleard" @press="longtap"></w-qrcode>
 	<view @click="SaveCode">保存图片</view>
 </template>
 <script>
