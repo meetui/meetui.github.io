@@ -1,7 +1,7 @@
 # Nvue
 > *更新时间 2020-07-01*
 
-nvue 特有使用方式
+nvue 特有使用方式 参数请参考vue
 ### 配置
 
 `manifest.json`

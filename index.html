@@ -7,15 +7,13 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="favicon.png">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" type="text/css">
-  <!-- <link  rel="stylesheet" href="./css/style.min.css" title="docsify-darklight-theme" type="text/css" /> -->
+  <link  rel="stylesheet" href="./css/style.min.css" title="docsify-darklight-theme" type="text/css" />
 </head>
 <body>
   <nav style="position: fixed;z-index:9999;"></nav>
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
-      // logo: 'log.svg',
       coverpage: true, //启用首页渲染
       executeScript: true,//开启scripr执行
       // routerMode: 'history', // default: 'hash'
@@ -28,7 +26,7 @@
       cornerExternalLinkTarget: '_self', // default: '_blank'
       auto2top: true,//切换页面后是否自动跳转到页面顶部。
       name: 'Meet-UI',
-      repo: '#',
+      repo: 'https://github.com/lovewmf/uni-code',
       // subMaxLevel: 2,
       // topMargin: 90, // default: 0
       search: {
@@ -63,6 +61,9 @@
           label: "注意"
         }
       }
+    }
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
     }
   </script>
   <!-- Docsify v4 -->

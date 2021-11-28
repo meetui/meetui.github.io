@@ -10,8 +10,6 @@ Android开机自启动，支持Android广告屏，机顶盒等
 |:----:|:----:|
 |√ |× |
 
-如果是云打包 直接在[插件市场](https://ext.dcloud.net.cn/plugin?id=3957)点击 右上角 for云打包 填好相关信息即可 无需执行任何接口
-
 #### 插件测试使用流程
 
 * 在项目根目录下新建nativeplugins目录 将下载的插件解压放入该目录
@@ -26,6 +24,30 @@ Android开机自启动，支持Android广告屏，机顶盒等
 
 * 本插件适用于Android广告屏，机顶盒等等
 
+## 云打包
+
+如果是云打包 直接在[插件市场](https://ext.dcloud.net.cn/plugin?id=3957)点击 右上角 for云打包 填好相关信息即可 无需执行任何接口
+
+## 离线打包
+ 
+将下载的插件解压，将插件中``android`目录下的`aar/jar`文件放入`libs`下
+在`assets`目录下创建`json`文件,如果已经有请忽略
+
+```json
+{  
+  "nativePlugins": [  
+    {
+      "plugins": [  
+        {
+            "type": "module",
+            "name": "wmf-BootUp",
+            "class": "com.wmf.bootup"
+        }
+      ]  
+    }  
+  ]  
+}
+```
 
 # 应用禁止截屏
 > 更新时间 2020-07-05
@@ -48,12 +70,6 @@ Android开机自启动，支持Android广告屏，机顶盒等
         onLaunch: function() {
             const scree = uni.requireNativePlugin('wmf-UnScreen')
             scree.Prohibit();
-        },
-        : function() {
-            console.log('App Show')
-        },
-        onHide: function() {
-            console.log('App Hide')
         }
     }
  </script>
@@ -72,12 +88,6 @@ Android开机自启动，支持Android广告屏，机顶盒等
                     plus.android.importClass(mwindow);  
                     mwindow.setFlags(0x00002000);//WindowManager.LayoutParams.FLAG_SECURE
             }
-        },
-        : function() {
-            console.log('App Show')
-        },
-        onHide: function() {
-            console.log('App Hide')
         }
     }
  </script>

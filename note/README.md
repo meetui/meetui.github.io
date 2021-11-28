@@ -2,8 +2,22 @@
 
 > 更新时间 2020-07-01
 
-* 修复 MacOSX 3.1.17引出的 自带中文输入法输入英文会造成部分类型的文件着色失效的Bug
-* 修复 MacOSX 3.1.17引出的 10.13.6操作系统，某些情况下，HBuilderX无法启动的Bug
-* 修复 Windows 3.1.17引出的 vue-cli项目，当电脑本身没有安装node环境时，运行项目到内置终端，相关npm命令执行失败的Bug
-* 优化 酷黑、雅蓝主题 代码助手 选中文本颜色
-* 修复 代码助手 数字模式 sass文件，某些css属性值无法正确输入数字的Bug
+
+# mapper助手移动端H5 <small>map_helper_xj_h5</small>
+
+```js
+npm run dev //开发环境
+
+// 发布打包命令
+npm run generate:test //测试环境
+
+npm run generate:pro // 生产环境
+
+// 根据环境变量判断
+process.env.environment == 'pro'// 生产环境
+
+process.env.environment == 'test'// 测试环境
+
+process.env.environment == 'dev'// 开发环境
+
+```

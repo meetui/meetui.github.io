@@ -28,9 +28,11 @@
 已有仓库?
 
 ```js
-1. git remote add origin https://gitee.com/lovewmf/test.git
+1. git remote rm origin
 
-2. git push -u origin master
+2. git remote add origin https://gitee.com/lovewmf/test.git
+
+3. git push -u origin master
 ```
 
 ### 删除远程仓库分支
@@ -62,6 +64,24 @@ git merge dev // 合并整个dev到当前分支
 
 ```js
 git cherry-pick 282a0bcd6a64df3ffa6c24fbd8453ff22844a131 // 合并某一次提交到当前分支
+```
+
+### 创建标签
+
+```js
+
+git tag 2021-07-08 // 创建tag
+
+git tag -a 2021-07-08 -m "注释"// 创建带注释的tag
+
+git push origin 2021-07-08 //将tag 推送到远程
+
+git tag -d 2021-07-08 //删除本地tag
+
+git push origin :refs/tags/2021-07-08 // 删除远程tag
+
+git tag // 列出所有tag
+
 ```
 
 ### commit注释规范
