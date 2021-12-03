@@ -78,7 +78,7 @@ module.exports = {
 
 ```html
 <template>
-	<w-barcode @press="longtap" ref="barcode" :options="options"  @generate="aleard"></w-barcode>
+	<w-barcode @press="longtap" ref="barcode" :options="options"  @generate="aleard" @error="handleError"></w-barcode>
 	<view @click="SaveCode"></view>
 </template>
 <script>
@@ -102,6 +102,9 @@ module.exports = {
             aleard (res) {// 条形码创建成功的回调 修改参数同样触发
                 console.log(res)
             },
+			handleError (e) {//当发生错误时触发
+				console.log(e);
+			},
 			longtap (e){//长安事件
 				console.log(e);
 			}
@@ -142,8 +145,9 @@ options为一个对象
 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;事件名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|说明|回调参数|
 |:----:   |:----:|:-----:|
-|generate |条形码创建成功的时候触发  |返回一个对象 |
-|press |手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动  |- |
+|@generate |条形码创建成功的时候触发  |返回一个对象 |
+|@press |手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动  |- |
+|@error |当发生错误时触发 error 事件  |字节跳动小程序与飞书小程序不支持|
 
 ### generate返回对象字段说明
 

@@ -179,7 +179,7 @@ uni.getImageInfo({
 
 ```html
 <template>
-	<w-qrcode ref="qrcode" :options="options" @generate="aleard" @press="longtap"></w-qrcode>
+	<w-qrcode ref="qrcode" :options="options" @generate="aleard" @press="longtap" @error="handleError"></w-qrcode>
 	<view @click="SaveCode">保存图片</view>
 </template>
 <script>
@@ -226,6 +226,9 @@ uni.getImageInfo({
             aleard (res) {// 二维码创建成功或者失败的回调 修改参数同样触发 新增返回二维码图片
                 console.log(res)
             },
+			handleError (e) {//当发生错误时触发
+				console.log(e);
+			},
 			longtap (e){//手指长按事件
 				console.log(e);
 			}
@@ -297,8 +300,9 @@ options为一个对象
 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;事件名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|说明|参数|
 |:----:   |:----:|:-----:|
-|generate |二维码创建成功的时候触发  |返回一个对象 包括二维码图片|
-|press |二维码长按事件  |手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动|
+|@generate |二维码创建成功的时候触发  |返回一个对象 包括二维码图片|
+|@press |二维码长按事件  |手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动|
+|@error |当发生错误时触发 error 事件  |字节跳动小程序与飞书小程序不支持|
 
 ### generate返回对象字段说明
 
