@@ -34,7 +34,7 @@
 在`pages.json`里面配置如下
 ```js
 "easycom": {
-	"^w-(.*)": "@/uni_modules/wmf-code/components/w-$1/index.vue"//二维码条形码的配置 如果是npm方式使用 @uni-ui/code-ui/components/w-$1/index.vue
+	"^w-(.*)": "@/uni_modules/wmf-code/components/w-$1/w-$1.vue"//二维码条形码的配置 如果是npm方式使用 @uni-ui/code-ui/components/w-$1/index.vue
 },
 "pages": [
   //...
