@@ -132,6 +132,7 @@ options为一个对象
 |color     |否  |Array | 生成条形码的颜色默认黑色 多个渐变色['#e66465','#9198e5'] 最多10中颜色   |
 |width |是  |Number | 生成条形码的宽度 一律当rpx处理    |
 |height |是  | Number | 生成条形码的高度 一律当rpx处理|
+|orient |否  | string | 条形码方向 水平 垂直 默认水平 horizontal ｜vertical|
 
 > [!ATTENTION]
 > 如果以组件的形式使用，参数`id`与`ctx`不需要传。其他参数更具自己需求添加使用
