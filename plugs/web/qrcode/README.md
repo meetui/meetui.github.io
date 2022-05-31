@@ -253,6 +253,7 @@ options为一个对象
 |<span style="color:red;font-weight: 600;">ctx</span> |否  |Object | 自定义组件实例 this 如果以组件方式使用此属性不需要|
 |code |是  |String | 扫描二维码的结果    |
 | padding| 否 | Number| 二维码间距|
+| src| 否 | String| 二维码背景图片|
 |border |否  |Object | 生成二维码的边框配置    |
 |bgColor |否  |String | 生成二维码的背景色 默认 '#FFFFFF'    |
 |color     |否  |Array | 生成二维码的颜色默认黑色 支持渐变色['#e66465','#9198e5']    |
