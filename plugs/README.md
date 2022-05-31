@@ -87,6 +87,8 @@ npm i @uni-ui/code-plugs
 		data() {
 			return {
 				qar: {//所有属性配置示例
+					id: 'qrcode',
+					ctx: this,
 					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0', //必传
 					level: 4, //纠错等级 0~4 默认4 非必传
 					type: 'none',// 码点 目前只支持 none 其它暂不支持 非必传
