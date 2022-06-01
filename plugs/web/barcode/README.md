@@ -189,6 +189,8 @@ options为一个对象
 |orient |否  | string | 条形码方向 水平 垂直 默认水平 horizontal ｜vertical|
 |text |否  | Object | 条形码文字配置 |
 
+> [!ATTENTION]
+> 如果以组件的形式使用，参数`id`与`ctx`不需要传。其他参数更具自己需求添加使用
 
 ### text
 
@@ -201,9 +203,6 @@ options为一个对象
 |padding |否  | Number | 条形码文字距离条形码图片的距离 一律当rpx处理 默认20|
 |opacity |否  | Number | 条形码文字透明度0～1 默认不透明|
 
-
-> [!ATTENTION]
-> 如果以组件的形式使用，参数`id`与`ctx`不需要传。其他参数更具自己需求添加使用
 
 ### Methods
 
