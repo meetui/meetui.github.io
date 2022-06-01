@@ -1,6 +1,6 @@
 # 条形码
 
-> 更新时间 2020-07-01
+> 更新时间 2022-06-01
 
 
 此组件为条形码，默认条形码的颜色是黑色，如果需要颜色则需要传对应的参数详情可参考下面的示例
@@ -74,6 +74,60 @@ module.exports = {
 ```
 
 
+### 条形码方向
+
+```html
+<template>
+	<w-barcode :options="options"></w-barcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					width: 670, // 宽度 单位rpx
+					height: 100, // 高度 单位rpx
+                    color: ['#45B649','#00c3ff', '#ee0979'], //默认黑色 如果传入多个则颜色渐变
+					code: 'E57890543271985',// 生成条形码的值
+					orient: 'vertical',// 默认horizontal
+				},
+			}
+		},
+	}
+</script>
+```
+
+
+### 条形码添加文字
+
+```html
+<template>
+	<w-barcode :options="options"></w-barcode>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				options:{
+					width: 670, // 宽度 单位rpx
+					height: 100, // 高度 单位rpx
+                    color: ['#45B649','#00c3ff', '#ee0979'], //默认黑色 如果传入多个则颜色渐变
+					code: 'E57890543271985',// 生成条形码的值
+					text: {
+						content: 'E01181016286106',
+						color:['#ee0979','#e96443','#904e95'],
+						position: 'top' ,//bottom
+						size: 40,
+						padding: 20
+					}
+				},
+			}
+		},
+	}
+</script>
+```
+
+
 ### 完整示例
 
 ```html
@@ -133,6 +187,20 @@ options为一个对象
 |width |是  |Number | 生成条形码的宽度 一律当rpx处理    |
 |height |是  | Number | 生成条形码的高度 一律当rpx处理|
 |orient |否  | string | 条形码方向 水平 垂直 默认水平 horizontal ｜vertical|
+|text |否  | Object | 条形码文字配置 |
+
+
+### text
+
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|类型|说明|
+|:----:|:----:|:----:|:----:|
+|content |是  |String | 条形码文字内容    |
+|color |否  |Array | 条形码文字颜色 默认 '#000000'   支持渐变色 小程序平台不支持渐变  |
+|position     |否  |String | 条形码文字内容位置 top/bottom    默认top|
+|size |否  |Number | 条形码文字大小 一律当rpx处理  默认40  |
+|padding |否  | Number | 条形码文字距离条形码图片的距离 一律当rpx处理 默认20|
+|opacity |否  | Number | 条形码文字透明度0～1 默认不透明|
+
 
 > [!ATTENTION]
 > 如果以组件的形式使用，参数`id`与`ctx`不需要传。其他参数更具自己需求添加使用
