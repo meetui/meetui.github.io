@@ -1,5 +1,5 @@
 # Nvue
-> *更新时间 2020-07-01*
+> *更新时间 2021-06-23*
 
 nvue 特有使用方式 参数请参考vue
 ### 配置
@@ -266,7 +266,7 @@ npm i @uni-ui/code-plugs
                 CODE.BarCode({...this.config.bar,code: this.code,id: this.ctxBR});
                 // 二维码
                 CODE.QRCode({...this.config.qrc, id: this.ctxQR, code: "https://weixin.qq.com/g/AwYAAHO3aO4zlasEij6bLsk4hlZd5XNFkkBmqyS55mLPFxmn5c9PaI1omqLhd24f"},res=>{
-					console.log(res)//二维码创建成功失败都回回调
+					console.log(res)//二维码创建成功失败都会 回调
 				});
             },
 			getSystemInfo () {
