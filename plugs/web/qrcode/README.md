@@ -1,6 +1,6 @@
 # 二维码
 
-> 更新时间 2022-05-31
+> 更新时间 2022-07-01
 
 此组件为二维码，默认没有边框以及二维码的颜色是黑色，支持纯汉字以及字母数字的混合code。如果需要边框或者颜色需要传对应的参数详情可参考下面的示例
 
@@ -220,7 +220,7 @@ uni.getImageInfo({
 		},
         methods: {
             async SaveCode (){//保存二维码图片
-                const res = await this.$refs.qrcode.saveImg()
+                const res = await this.$refs.qrcode.GetCodeImg()
                 console.log(res)
             },
             aleard (res) {// 二维码创建成功或者失败的回调 修改参数同样触发 新增返回二维码图片
