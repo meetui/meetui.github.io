@@ -43,7 +43,9 @@ git remote rm origin
 git branch -D name
 
 git push origin --delete name
+
 ```
+
 ### 账号错误
 
 清空本地保存的用户名和密码
@@ -64,6 +66,15 @@ git merge dev // 合并整个dev到当前分支
 
 ```js
 git cherry-pick 282a0bcd6a64df3ffa6c24fbd8453ff22844a131 // 合并某一次提交到当前分支
+```
+
+### 常规操作
+
+```js
+git reset --hard 282a0bcd6a64df3ffa6c24fbd8453ff22844a131 // 会退到某一次提交的版本
+
+git merge --abort // 会退到pull之前
+
 ```
 
 ### 创建标签
@@ -127,4 +138,3 @@ git commit -m "perf: 优化相关，比如提升性能、体验"
 
 git commit -m "docs: 文档"
 ```
-
