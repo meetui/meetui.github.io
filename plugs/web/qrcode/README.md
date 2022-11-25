@@ -52,6 +52,33 @@ module.exports = {
 
 ```
 
+### 不配置 easycom
+
+```html
+<template>
+	<w-qrcode :options="options"></w-qrcode>
+</template>
+<script>
+	import WQrcode from '@/uni_modules/wmf-code/components/w-qrcode'//@uni-ui/code-ui/components/w-qrcode/index.vue
+	import WBrcode from '@/uni_modules/wmf-code/components/w-barcode'//@uni-ui/code-ui/components/w-barcode/index.vue
+	export default {
+		components: {// 条形码 二维码
+			WQrcode,
+			WBrcode
+		},
+		data() {
+			return {
+				options:{
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0',// 生成二维码的值
+					size: 460,// 460代表生成的二维码的宽高均为460rpx
+				},
+			}
+		},
+	}
+</script>
+
+```
+
 ### 增加边框
 
 ```html
@@ -188,7 +215,7 @@ uni.getImageInfo({
 			return {
 				options:{
 					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0', //必传
-					level: 4, //纠错等级 0~4 默认4 非必传
+					level: 4, //纠错等级 0~4 默认2 非必传
 					type: 'none',// 码点 目前只支持 none 其它暂不支持 非必传
 					src: '/static/35.png',//画布背景 非必传
 					padding: 10, //二维码margin Number 单位rpx 默认0 非必传
@@ -259,7 +286,7 @@ options为一个对象
 |bgColor |否  |String | 生成二维码的背景色 默认 '#FFFFFF'    |
 |color     |否  |Array | 生成二维码的颜色默认黑色 支持渐变色['#e66465','#9198e5']    |
 |size |是  |String/Number |二维码的大小 一律当rpx处理  |
-|level |否  |Number | 生成二维码的纠错等级默认4 取值范围0~4    |
+|level |否  |Number | 生成二维码的纠错等级默认2 取值范围0~2    |
 |img     |否  |Object | 生成二维码中间的图标配置    |
 |text     |否  |Object | 生成二维码中间的文字配置 |
 
